@@ -1,0 +1,10 @@
+17.68 ./nr icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+10.29 ./gsl icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+16.73 ./nr icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+9.08 ./gsl icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+21.88 ./nr icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+10.32 ./gsl icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+1.70 ./lapack icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512 -mkl
+18.88 ./nr icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+8.97 ./gsl icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
+0.80 ./lapack icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512 -mkl

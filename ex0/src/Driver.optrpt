@@ -1,0 +1,109 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+Begin optimization report for: main()
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at Driver.c(62,2) inlined into Driver.c(149,2)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Driver.c(63,3) inlined into Driver.c(149,2)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at Driver.c(63,3) inlined into Driver.c(149,2)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at Driver.c(77,2) inlined into Driver.c(150,2)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Driver.c(77,2) inlined into Driver.c(150,2)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at Driver.c(77,2) inlined into Driver.c(151,2)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Driver.c(77,2) inlined into Driver.c(151,2)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at Driver.c(89,2) inlined into Driver.c(192,2)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Driver.c(89,2) inlined into Driver.c(192,2)
+<Remainder loop for vectorization>
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at Driver.c(155,2)
+   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.   [ Driver.c(183,3) ]
+LOOP END
+===========================================================================
+
+Begin optimization report for: printsum(int, float *)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at Driver.c(89,2)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Driver.c(89,2)
+<Remainder loop for vectorization>
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Driver.c(89,2)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: init_array(int, float, float *)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at Driver.c(77,2)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at Driver.c(77,2)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Driver.c(77,2)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: init_matrix(int, int, float, float (*)[47])
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at Driver.c(62,2)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Driver.c(63,3)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at Driver.c(63,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================

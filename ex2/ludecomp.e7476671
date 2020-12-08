@@ -1,0 +1,35 @@
+/tmp/slurmd/job7476671/slurm_script: line 13: model: command not found
++ export MATRIX=3000
++ MATRIX=3000
++ OUT=t7476671.txt
++ echo Shell is /bin/bash
++ count=0
++ for lib in nr gsl lapack
++ /usr/bin/time -f %e ./nr -n 3000
++ test 0 -eq 0
+++ cat nrtime.txt
++ export RUNTIME=18.88
++ RUNTIME=18.88
+++ ./nr -f
++ echo 18.88 ./nr icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
++ count=1
++ for lib in nr gsl lapack
++ /usr/bin/time -f %e ./gsl -n 3000
++ test 0 -eq 0
+++ cat nrtime.txt
++ export RUNTIME=8.97
++ RUNTIME=8.97
+++ ./gsl -f
++ echo 8.97 ./gsl icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512
++ count=2
++ for lib in nr gsl lapack
++ /usr/bin/time -f %e ./lapack -n 3000
++ test 0 -eq 0
+++ cat nrtime.txt
++ export RUNTIME=0.80
++ RUNTIME=0.80
+++ ./lapack -f
++ echo 0.80 ./lapack icc -O3 -ipo -xCORE-AVX2 -axCORE-AVX512,MIC-AVX512 -mkl
++ count=3
++ date
++ hostname
